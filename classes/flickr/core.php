@@ -19,8 +19,8 @@
         public function query($method, $params=NULL) {
             $this->param['method'] = utf8::trim($method);
             $params = arr::merge($this->param, $params ? $params : array() );
-            $params = url::query($params);
-            $serial = remote::get($this->request_uri.$params);
+						$params = url::query($params);
+						$serial = Flickr_Remote::get($this->request_uri.$params);
 
             if(!empty($serial))
               return unserialize($serial);
@@ -42,10 +42,10 @@
         }
 
         static public function instance() {
-            if( self::$instance instanceof Flickr_Core )
+            if(self::$instance instanceof self)
                 return self::$instance;
 
-            return self::$instance = new Flickr();
+            return self::$instance = new self;
         }
 
         public function __construct() {
