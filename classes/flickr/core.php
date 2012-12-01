@@ -1,4 +1,4 @@
-<?php
+<?php defined('SYSPATH') or die('No direct script access!');
     /**
       * Class for access Flickr API using Kohana Framework 3.x
       * @author Jean < http://github.com/jeanmask >
@@ -49,7 +49,7 @@
         }
 
         public function __construct() {
-            $this->param['api_key'] = Kohana::config('flickr.api_key');
+            $this->param['api_key'] = Kohana::$config->load('flickr.api_key');
             $this->param['format'] = 'php_serial';
         }
     }
