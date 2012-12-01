@@ -1,4 +1,4 @@
-<?php
+<?php defined('SYSPATH') or die('No direct script access!');
     /**
       * Class for access Flickr API using Kohana Framework 3.x
       * @author Jean < http://github.com/jeanmask >
