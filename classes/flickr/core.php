@@ -49,7 +49,7 @@
         }
 
         public function __construct() {
-            $this->param['api_key'] = Kohana::config('flickr.api_key');
+            $this->param['api_key'] = Kohana::$config->load('flickr.api_key');
             $this->param['format'] = 'php_serial';
         }
     }
