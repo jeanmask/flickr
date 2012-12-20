@@ -1,4 +1,4 @@
-Flickr API Module for Kohana 3.2.x
+Flickr API Module for Kohana 3.3.x
 ===================================
 
 ## How to use:
